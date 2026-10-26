@@ -1,7 +1,17 @@
 # bb-side-board
 
-A [bb](https://getbb.app) plugin that keeps a side panel of the questions, bugs and todos your
-agent raises, numbered `Q1` / `B1` / `T1`. Items are added and closed automatically, in every thread.
+A [bb](https://getbb.app) plugin that keeps an overview of the questions your agents ask you.
+
+Agents ask questions mid-reply, between a diff and a test run, and the questions scroll away.
+You answer one, miss the next, and the agent waits on a decision you never saw. Side board pulls
+every question into a panel beside the thread, numbered `Q1`, `Q2`, …, with the agent's
+recommendation and alternatives. Answer in chat with `Q2 postgres`, or `go` to accept every
+recommendation. The agent closes each question as soon as it is answered.
+
+The same panel collects the bugs an agent noticed but was not asked to fix (`B1`) and the work it
+deferred (`T1`). Open items come first; closed ones fold away with their resolution.
+
+![Side board panel: open questions with recommendations, todos and bugs, closed items folded](docs/side-board-panel.png)
 
 ```
  agent turn ──► board_add / board_close / board_list   (agent tools)
