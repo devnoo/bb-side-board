@@ -36,6 +36,17 @@ bb plugin install git:https://github.com/devnoo/bb-side-board@semver:^0.1.0
 
 Threads that are already running pick it up when their next session starts.
 
+### bb plugin store
+
+Side board isn't in the in-app plugin store yet. The listing is submitted in
+[get-bb/marketplace#693](https://github.com/get-bb/marketplace/pull/693), and the maintainers' review
+passed: v0.1.0 installs and loads on bb 0.47.1. The PR is on a store-wide hold, because the combined
+catalog file would go over its 1 MiB limit with this entry added. Nothing in the plugin needs to change.
+The maintainers will recheck it once the catalog has room.
+
+Until then, install with the command above. You get the same plugin, and `bb plugin update` follows new
+releases.
+
 ## Settings
 
 | Key | Default | |
